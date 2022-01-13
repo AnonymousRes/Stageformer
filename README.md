@@ -1,11 +1,10 @@
 # Stageformer
-=========================
 ## Requirements
--Scikit-learn 1.0
--Pytorch 1.10.0
--TensorFlow 2.7.0
--Numpy 1.21.2 
--Panda 1.2.3	
+ - Scikit-learn 1.0
+ - Pytorch 1.10.0
+ - TensorFlow 2.7.0
+ - Numpy 1.21.2 
+ - Panda 1.2.3	
 
 ## Processing MIMIC-IV Dataset
 ### Building Train / Test Dataset
