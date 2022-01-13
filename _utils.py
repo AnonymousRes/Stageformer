@@ -21,43 +21,7 @@ def dp_predictor_loss(y_true, y_pred, mask_):
     return loss
 
 
-def ihmp_predictor_loss(y_true, y_pred):
-    ytr = y_true
-    ypr = y_pred
-    batchsize_ = y_true.size()[0]
-    loss = ytr * torch.log(ypr + 1e-7) + (1 - ytr) * torch.log(1 - ypr + 1e-7)
-    loss = torch.neg(torch.sum(loss)) / batchsize_
-    return loss
-
-
 class DPDataset(Dataset):
-    def __init__(self, dpdata_file):
-        self.dpdata_file = dpdata_file
-        data_dict_file = open(self.dpdata_file, 'rb')
-        data_dict = pickle.load(data_dict_file)
-        data_dict_file.close()
-        self.X = data_dict['X']
-        self.MASK = data_dict['MASK']
-        self.CUR_MASK = data_dict['CUR_MASK']
-        self.INTERVAL = data_dict['INTERVAL']
-        self.Y = data_dict['Y']
-
-
-    def __len__(self):
-        return len(self.X)
-
-
-    def __getitem__(self, idx):
-        x = self.X[idx]
-        mask = self.MASK[idx]
-        curmask = self.CUR_MASK[idx]
-        interval = self.INTERVAL[idx]
-        y = self.Y[idx]
-
-        return x, mask, curmask, interval, y
-
-
-class IHMPDataset(Dataset):
     def __init__(self, dpdata_file):
         self.dpdata_file = dpdata_file
         data_dict_file = open(self.dpdata_file, 'rb')
