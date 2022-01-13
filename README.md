@@ -18,5 +18,13 @@ Read https://github.com/AnonymousRes/MIMIC-IV-PROCESSING/blob/main/README.md
        python OurModelDecompensationPrediction.py 3
        
 2. Run Stageformer/OurModelDecompensationPrediction.py (MIMIC-IV)
+
        python OurModelDecompensationPrediction.py 4
        
+3. Run Ablation Experiment (MIMIC-III)
+
+       python Ablation.py.py 3
+       
+3. Run Ablation Experiment (MIMIC-IV)
+
+       python Ablation.py.py 4
