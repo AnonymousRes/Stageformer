@@ -23,8 +23,8 @@ Read https://github.com/AnonymousRes/MIMIC-IV-PROCESSING/blob/main/README.md
        
 3. Run Ablation Experiment (MIMIC-III)
 
-       python Ablation.py.py 3
+       python Ablation.py 3
        
 3. Run Ablation Experiment (MIMIC-IV)
 
-       python Ablation.py.py 4
+       python Ablation.py 4
