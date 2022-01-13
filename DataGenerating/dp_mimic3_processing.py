@@ -13,7 +13,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--data', type=str, help='Path to the data of decompensation task',
-                    default='/home/user/mimic3processed/decompensation/')
+                    default='~/mimic3processed/decompensation/')
 args = parser.parse_args()
 print(args)
 # # Build readers, discretizers, normalizers
@@ -116,14 +116,14 @@ print(train_x.shape, train_mask.shape, train_dt.shape, train_y.shape, '\n',
 #mimic3 (29030, 42, 76) (29030, 42) (29030, 42, 1) (6335, 42, 76) (6335, 42) (6335, 42, 1) (6237, 42, 76) (6237, 42) (6237, 42, 1)
 #mmimi4 (42386, 42, 76) (42386, 42) (42386, 42, 1) (7666, 42, 76) (7666, 42) (7666, 42, 1) (8760, 42, 76) (8760, 42) (8760, 42, 1)
 
-pickle_file = open('/home/user/ehrits_data/dp/dp_mimic3_train_data.pkl', 'wb')
+pickle_file = open('~/dp_mimic3_train_data.pkl', 'wb')
 pickle.dump(train_dict, pickle_file)
 pickle_file.close()
 
-pickle_file = open('/home/user/ehrits_data/dp/dp_mimic3_val_data.pkl', 'wb')
+pickle_file = open('~/dp_mimic3_val_data.pkl', 'wb')
 pickle.dump(val_dict, pickle_file)
 pickle_file.close()
 
-pickle_file = open('/home/user/ehrits_data/dp/dp_mimic3_test_data.pkl', 'wb')
+pickle_file = open('~/dp_mimic3_test_data.pkl', 'wb')
 pickle.dump(test_dict, pickle_file)
 pickle_file.close()
