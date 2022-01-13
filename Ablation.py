@@ -57,7 +57,7 @@ if __name__ == '__main__':
     test_data_file = ''
     saved_model_file = ''
 
-    logging_file = f'/home/leew/projects/Lee_ehrits/out_log/dp_mimic{args.mimic_dataset:d}_ourmodel_results_log.log'
+    logging_file = f'~/out_log/dp_mimic{args.mimic_dataset:d}_ourmodel_results_log.log'
     logging.basicConfig(level=logging.INFO,
                         format='%(asctime)s %(levelname)s: %(message)s',
                         datefmt='[%Y/%m/%d %H:%M:%S]',
@@ -76,17 +76,17 @@ if __name__ == '__main__':
                                                                                     args.epochs, args.lr, args.patience, args.reseample_times))
 
         if args.mimic_dataset == 3:
-            train_data_file = '/home/leew/ehrits_data/dp/dp_mimic3_train_data.pkl'
-            val_data_file = '/home/leew/ehrits_data/dp/dp_mimic3_val_data.pkl'
-            test_data_file = '/home/leew/ehrits_data/dp/dp_mimic3_test_data.pkl'
-            saved_model_file = f'/home/leew/ehrits_data/dp/{baseline_name:s}-MIMIC-III'
+            train_data_file = '~/dp_mimic3_train_data.pkl'
+            val_data_file = '~/dp_mimic3_val_data.pkl'
+            test_data_file = '~/dp_mimic3_test_data.pkl'
+            saved_model_file = f'~/{baseline_name:s}-MIMIC-III'
 
             os.environ["CUDA_VISIBLE_DEVICES"] = '0'
         else:
-            train_data_file = '/home/leew/ehrits_data/dp/dp_mimic4_train_data.pkl'
-            val_data_file = '/home/leew/ehrits_data/dp/dp_mimic4_val_data.pkl'
-            test_data_file = '/home/leew/ehrits_data/dp/dp_mimic4_test_data.pkl'
-            saved_model_file = f'/home/leew/ehrits_data/dp/{baseline_name:s}-MIMIC-IV'
+            train_data_file = '~/dp_mimic4_train_data.pkl'
+            val_data_file = '~/dp_mimic4_val_data.pkl'
+            test_data_file = '~/dp_mimic4_test_data.pkl'
+            saved_model_file = f'~/{baseline_name:s}-MIMIC-IV'
             os.environ["CUDA_VISIBLE_DEVICES"] = '1'
         ''' Prepare training data'''
 
@@ -252,4 +252,4 @@ if __name__ == '__main__':
     pd.DataFrame(
         data=np.array(all_baseline_results, dtype=np.str),
         columns=['Model', 'F1', 'AUROC', 'AUPRC', 'Min(Se, P+)'],
-        index=None).to_csv(f'/home/leew/projects/Lee_ehrits/out_log/dp_mimic{args.mimic_dataset:d}_ourmodel_results.csv', index=None)
+        index=None).to_csv(f'~/out_log/dp_mimic{args.mimic_dataset:d}_ourmodel_results.csv', index=None)
