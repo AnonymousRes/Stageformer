@@ -6,7 +6,9 @@
  - Numpy 1.21.2 
  - Panda 1.2.3	
 
-## Processing MIMIC Dataset
-### Building Pre-process MIMIC
+## Process MIMIC Dataset
+### Pre-process MIMIC
 Read https://github.com/AnonymousRes/MIMIC-IV-PROCESSING/blob/main/README.md
-### Building Pre-process MIMIC
+### Generate Experimental Data
+1. Run Stageformer/DataGenerating/dp_mimic3_processing.py
+2. Run Stageformer/DataGenerating/dp_mimic3_processing.py
