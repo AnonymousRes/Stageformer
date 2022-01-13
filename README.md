@@ -14,6 +14,9 @@ Read https://github.com/AnonymousRes/MIMIC-IV-PROCESSING/blob/main/README.md
 2. Run Stageformer/DataGenerating/dp_mimic4_processing.py
 ### Train Stageformer
 1. Run Stageformer/OurModelDecompensationPrediction.py (MIMIC-III)
+       python -m mimic4processing.scripts.validate_events ~/mimic4processed/
        python OurModelDecompensationPrediction.py 3
+       
 2. Run Stageformer/OurModelDecompensationPrediction.py (MIMIC-IV)
        python OurModelDecompensationPrediction.py 4
+       
